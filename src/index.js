@@ -35,7 +35,7 @@ const onFormSubmit = async (evt) => {
         Notify.success(`Hooray! We found ${totalHits} images.`);
 
         const target = document.querySelector('.photo-card:last-child')
-        Intersection.unobserve(target);
+        Intersection.observe(target);
 
         lightbox.refresh
        
