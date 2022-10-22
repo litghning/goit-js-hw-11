@@ -7,8 +7,8 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { ImagesApiService } from "./js/service";
 import { createMarkup } from "./js/createMarkup";
 import { refs } from "./js/refs";
+let  lightbox = new SimpleLightbox('.gallery a')
 
-let lightbox = {};
 const imagesAPI = new ImagesApiService();
 const onFormSubmit = async (evt) => {
     evt.preventDefault();
@@ -37,8 +37,8 @@ const onFormSubmit = async (evt) => {
         const target = document.querySelector('.photo-card:last-child')
         Intersection.observe(target);
 
-
-        lightbox = new SimpleLightbox('.gallery a')
+        lightbox.refresh
+       
 
         imagesAPI.calculateTotalPages(totalHits);
        
