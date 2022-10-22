@@ -21,7 +21,7 @@ export class ImagesApiService {
         })
         const url = `${BASE_URL}/?${searchParams}`;
         const {data} = await axios.get(url);
-        this.incrementPage();
+
         return data;
     } 
 
