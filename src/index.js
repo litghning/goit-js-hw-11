@@ -35,7 +35,7 @@ const options = {
                      Notify.info("We're sorry, but you've reached the end of search results.")
                      return;
                  }
-                 if (!imagesAPI.isShowLoadMore) {
+                 if (imagesAPI.isShowLoadMore) {
                      const target = document.querySelector('.photo-card:last-child')
                  Intersection.observe(target);
                  }

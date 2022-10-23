@@ -41,6 +41,6 @@ export class ImagesApiService {
         this.totalPages = Math.ceil(total/this.perPage);
     }
     get isShowLoadMore() {
-        return this.page <= this.totalPages;
+        return this.page < this.totalPages;
     }
 }
